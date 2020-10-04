@@ -28,6 +28,7 @@ if (length > 128){
   alert("password must be less than 128 characters");
   return;
 
+// ask what characters and add conditionals
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
