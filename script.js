@@ -1,6 +1,5 @@
 // variables to be used in order to generate password
 // decided to only use a few special characters from keyboard
-
 var totalCharacters = [];
 console.log(totalCharacters);
 
@@ -12,13 +11,13 @@ var lowerCaseLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "
 
 var upperCaseLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
+
+// tried creating an array encompassing all of the arrays so that i could use it for the .join() function, but this failed
 var arr = [specialCharacters, numericalValues, lowerCaseLetters, upperCaseLetters];
 
 
 
 //create a function to prompt user how many characters they would like their password to contain
-
-
 function generatePassword() {
 
   var length = parseInt(prompt("How many characters would you like your password to contain?"));
@@ -78,7 +77,7 @@ function generatePassword() {
 
   }
 
-  // this is supposed to concatonate the string but its not working, because I still cant figure out not how to link or define variables for this part 
+  // this is supposed to concatenate the arrays but its not working because I still cant figure out how to link or define variables for this part 
   for (var i = 0; i < length; ++i) {
     arr[Math.floor(Math.random() * arr.length)];
   }
@@ -87,7 +86,6 @@ function generatePassword() {
 }
 
 // Assignment Code
-
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
@@ -100,5 +98,4 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-
 generateBtn.addEventListener("click", writePassword);
